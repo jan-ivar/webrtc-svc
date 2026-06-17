@@ -266,7 +266,8 @@
          </p>
       </section>
       <section id="set-description">
-       <h3>{{RTCPeerConnection/setLocalDescription()}} and {{RTCPeerConnection/setRemoteDescription()}}</h3>
+       <h3>{{RTCPeerConnection/setLocalDescription()}}
+       and {{RTCPeerConnection/setRemoteDescription()}}</h3>
          <p>
            [[!WEBRTC]] Section 4.4 describes the steps to
            [=set a session description=], <var>description</var>, on an
@@ -276,17 +277,22 @@
            and insert the following steps immediately ahead of it:
            <ol>
              <li id="init-rtcrtpencodingparameters-codec">
-               <p>For each <var>transceiver</var> in <var>connection</var>'s [= set of transceivers =]:</p>
+               <p>For each <var>transceiver</var> in <var>connection</var>'s
+               [=set of transceivers=]:</p>
                <ol>
                  <li>
-                   <p>Let <var>codecs</var> be <var>transceiver</var>.{{RTCRtpTransceiver/[[Sender]]}}.{{RTCRtpSender/[[SendCodecs]]}}.</p>
+                   <p>Let <var>codecs</var> be
+                   <var>transceiver</var>.{{RTCRtpTransceiver/[[Sender]]}}.{{RTCRtpSender/[[SendCodecs]]}}.
+                   </p>
                  </li>
                  <li>
                    <p>If <var>codecs</var> is not an empty list:</p>
                    <ol>
                      <li>
                        <p>For each <var>encoding</var> in
-                       <var>transceiver</var>.{{RTCRtpTransceiver/[[Sender]]}}.{{RTCRtpSender/[[SendEncodings]]}} that [=map/exists|contains=] a {{RTCRtpEncodingParameters/scalabilityMode}} member:</p>
+                       <var>transceiver</var>.{{RTCRtpTransceiver/[[Sender]]}}.{{RTCRtpSender/[[SendEncodings]]}}
+                       that [=map/exists|contains=] a
+                       {{RTCRtpEncodingParameters/scalabilityMode}} member:</p>
                        <ol>
                          <li>Let <var>scalabilityMode</var> be
                          <var>encoding</var>.{{RTCRtpEncodingParameters/scalabilityMode}}.</li>
